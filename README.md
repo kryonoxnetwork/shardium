@@ -10,7 +10,7 @@ Shardium consists of three core components:
 
 * **Controller** – Static Crystal binary (`shardium`) with CLI & REST API
 * **Agent Plugin** – Paper plugin running on every server (auto-injected into templates)
-* **Communication** – TCP / WebSocket + custom transfer packet system
+* **Communication** – TCP / WebSocket
 
 **Goal:** A fully closed, proxy-free cloud with autoscaling, group orchestration, live monitoring, and seamless in‑game player transfers.
 
