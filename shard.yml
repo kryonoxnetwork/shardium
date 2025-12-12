@@ -1,0 +1,8 @@
+name: shardium
+version: 0.0.1-BETA
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    version: ~> 1.0.0
+  
