@@ -1,25 +1,25 @@
 # Shardium
 
-A **production-ready, proxy‑less Minecraft Cloud System** designed for modern scaling, automatic orchestration, and seamless player transfers — all without BungeeCord.
+A **production-ready, proxy-less Minecraft Cloud System** designed for modern scaling, automatic orchestration, and seamless player transfers — all without BungeeCord.
 
 ---
 
-## 🚀 Überblick
+## 🚀 Overview
 
-Shardium besteht aus drei Kernkomponenten:
+Shardium consists of three core components:
 
-* **Controller** – Statische Crystal Binary (`shardium`) mit CLI & REST‑API
-* **Agent Plugin** – Paper‑Plugin auf jedem Server (automatisch in Templates)
-* **Kommunikation** – TCP / WebSocket + eigenes Transfer‑Packet‑System
+* **Controller** – Static Crystal binary (`shardium`) with CLI & REST API
+* **Agent Plugin** – Paper plugin running on every server (auto-injected into templates)
+* **Communication** – TCP / WebSocket + custom transfer packet system
 
-**Ziel:** Eine komplett geschlossene Cloud ohne Proxy, mit Auto‑Scaling, Gruppen‑Management, Live‑Monitoring und nahtlosen Transfers.
+**Goal:** A fully closed, proxy-free cloud with autoscaling, group orchestration, live monitoring, and seamless in‑game player transfers.
 
 ---
 
-## 📂 Verzeichnisstruktur
+## 📂 Directory Structure
 
 ```
-[DATA-PFAD]/
+[DATA-PATH]/
 ├── config/
 │   ├── config.yml
 │   └── groups/
@@ -36,7 +36,7 @@ Shardium besteht aus drei Kernkomponenten:
 
 ---
 
-## ⚙️ config.yml (automatisch generiert)
+## ⚙️ config.yml (auto-generated)
 
 ```yaml
 dataPath: "/opt/shardium/data"
@@ -54,7 +54,7 @@ servers:
 
 ---
 
-## 📄 Gruppen‑Definition (Example: lobby.yml)
+## 📄 Group Definition (Example: lobby.yml)
 
 ```yaml
 name: "lobby"
@@ -70,7 +70,7 @@ template: "lobby"
 
 ---
 
-## 🛠 CLI‑Befehle
+## 🛠 CLI Commands
 
 ### Setup
 
@@ -81,7 +81,7 @@ shardium stop
 shardium status
 ```
 
-### Gruppen
+### Groups
 
 ```
 shardium group create
@@ -114,7 +114,7 @@ shardium cache clear
 
 ---
 
-## 🔌 Agent Kommunikation
+## 🔌 Agent Communication
 
 ### Agent → Controller
 
@@ -136,7 +136,7 @@ COMMAND { type: "drain" }
 
 ---
 
-## 🌐 REST‑API
+## 🌐 REST API
 
 ```
 GET  /services
@@ -150,7 +150,7 @@ Authorization: Bearer <token>
 
 ---
 
-## 🧩 Agent‑API (Paper / ServicesManager)
+## 🧩 Agent API (Paper / ServicesManager)
 
 ```java
 NetworkApi api = Bukkit.getServicesManager().getRegistration(NetworkApi.class).getProvider();
@@ -163,16 +163,16 @@ api.sendNetworkMessage("global.chat", data);
 
 ---
 
-## 🔄 Beispiel‑Workflow
+## 🔄 Example Workflow
 
 ```
 1. ./shardium setup
 2. ./shardium group create
 3. ./shardium service create lobby
 4. ./shardium start
-5. Spieler joinen → Monitoring aktiv
-6. Live Logs ansehen
-7. Spieler transferieren
+5. Players join → monitoring updates
+6. View live logs
+7. Transfer players between services
 ```
 
 ---
@@ -190,18 +190,18 @@ sudo systemctl start shardium
 
 ## 🎯 Feature Matrix
 
-| Feature                       | Status |
-| ----------------------------- | ------ |
-| Proxy‑frei (eigene Transfers) | ✅      |
-| Interaktive Wizards           | ✅      |
-| Live‑Logs                     | ✅      |
-| Console‑Attach                | ✅      |
-| Auto‑Scaling                  | ✅      |
-| Registry/Cache System         | ✅      |
-| REST‑API (Bearer Auth)        | ✅      |
-| Static Binary                 | ✅      |
-| Agent‑API                     | ✅      |
+| Feature                             | Status |
+| ----------------------------------- | ------ |
+| Proxy-free (custom transfer system) | ✅      |
+| Interactive Wizards                 | ✅      |
+| Live Logs                           | ✅      |
+| Console Attach                      | ✅      |
+| Autoscaling                         | ✅      |
+| Registry / Cache System             | ✅      |
+| REST API (Bearer Auth)              | ✅      |
+| Static Binary                       | ✅      |
+| Agent API                           | ✅      |
 
 ---
 
-**Shardium – Die moderne Cloud für Minecraft‑Server.**
+**Shardium – The modern cloud platform for Minecraft servers.**
