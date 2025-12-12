@@ -1,4 +1,4 @@
-# ShardiumCloud
+# Shardium
 
 A **production-ready, proxy‑less Minecraft Cloud System** designed for modern scaling, automatic orchestration, and seamless player transfers — all without BungeeCord.
 
@@ -6,7 +6,7 @@ A **production-ready, proxy‑less Minecraft Cloud System** designed for modern 
 
 ## 🚀 Überblick
 
-ShardiumCloud besteht aus drei Kernkomponenten:
+Shardium besteht aus drei Kernkomponenten:
 
 * **Controller** – Statische Crystal Binary (`shardium`) mit CLI & REST‑API
 * **Agent Plugin** – Paper‑Plugin auf jedem Server (automatisch in Templates)
@@ -180,7 +180,7 @@ api.sendNetworkMessage("global.chat", data);
 ## 📦 Build & Deployment
 
 ```
-crystal build src/ShardiumCloud.cr --release -static -o shardium
+crystal build src/Shardium.cr --release -static -o shardium
 sudo cp shardium /usr/local/bin/
 sudo ./shardium setup --data /opt/shardium/data
 sudo systemctl start shardium
@@ -204,4 +204,4 @@ sudo systemctl start shardium
 
 ---
 
-**ShardiumCloud – Die moderne Cloud für Minecraft‑Server.**
+**Shardium – Die moderne Cloud für Minecraft‑Server.**
